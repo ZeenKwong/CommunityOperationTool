@@ -1,0 +1,55 @@
+/* pages/homeWork/homeWork.wxss */
+@import '/style/iconfont.wxss';
+#bgColor {
+  
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#circle {
+  border: 1px solid black;
+  border-radius: 100%;
+  /* background-color: white; */
+  width: 8rem;
+  height: 8rem;
+  box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.1);
+}
+#btnContain {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.btn {
+  color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.label{
+  font-size: 10px;
+  margin-top: 8px;
+  color: white;
+}
+
+.btnSelected {
+  background-color: white;
+  color: #ff7c12
+}
+
+.sliderContain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin: 16px 0;
+}

@@ -1,0 +1,16 @@
+<!--pages/canvasTest/canvasTest.wxml-->
+<form bindsubmit="getResult" class="fixed">
+  <textarea wx:if="{{textareaShow}}" placeholder="请输入台词，并用换行符分隔：" auto-focus class="textAreaCustem" name="textarea" />
+  <button form-type="submit" type="primary"> 提交 </button>
+</form>
+<view id="mask" class="fixed" style="visibility:{{visableFlag}}">
+  <scroll-view class="canvasCustem" scroll-y>
+    <view style="display: flex;justify-content: center;" wx:if="{{imgShow}}" bindlongtap="savePic">
+      <image style="width:303px;height:{{canvasHeight}}" src='{{tempFilePath}}'></image>
+    </view>
+  </scroll-view>
+  <button type="warn" bindtap="cancelCustem"> 取消 </button>
+</view>
+<view class="canvasCustem" style="position: absolute;left:999rem">
+  <canvas style="width:303px;height:{{canvasHeight}}" canvas-id="firstCanvas"></canvas>
+</view>

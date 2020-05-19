@@ -1,0 +1,37 @@
+/* pages/canvasTest/canvasTest.wxss */
+
+.fixed {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.textAreaCustem {
+  border: grey 1px solid;
+  border-radius: 16px;
+  height: 25rem;
+  padding: 16px;
+  box-sizing: border-box;
+  margin-bottom: 1rem
+}
+
+.canvasCustem {
+  width: 90%;
+  height: 25rem;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#mask {
+  background-color: rgba(0, 0, 0, 0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}

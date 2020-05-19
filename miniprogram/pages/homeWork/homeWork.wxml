@@ -1,0 +1,27 @@
+<!--pages/homeWork/homeWork.wxml-->
+<!-- <text>pages/homeWork/homeWork.wxml</text> -->
+<view id="bgColor" style="background-image: linear-gradient(rgb({{colorSet.lightColor.r}},{{colorSet.lightColor.g}},{{colorSet.lightColor.b}}), rgb({{colorSet.deepColor.r}},{{colorSet.deepColor.g}},{{colorSet.deepColor.b}}));">
+  <view id="circle" style="background-color:{{circleColor}}"></view>
+  <view style="width:90%">
+    <view class="sliderContain" wx:for="{{sliderArr}}" wx:key="{{index}}">
+      <view>
+        <text class="iconfont {{item.icon}}" style="font-size:25px;"></text>
+      </view>
+      <view style="width:100%;" >
+        <slider bindchanging="{{item.func}}" max="{{item.max}}" min="{{item.min}}" value="{{item.value}}" block-size="12" activeColor="#ff7c12" backgroundColor="#ffd6a2" disabled="{{disabledSlider}}"/>
+      </view>
+      <view style="width:60px;font-size:14px;">{{item.value}}
+        <text wx:if="{{item.func == 'temperature'}}">K</text>
+        <text wx:else>%</text>
+      </view>
+    </view>
+  </view>
+  <view id="btnContain">
+    <view style="text-align: center;" wx:for="{{btnArr}}" wx:key="{{index}}" bindtap="{{index==0?'switchBtn':'selectMode'}}" data-index="{{index}}">
+      <view class="btn {{index!=0&&index == selectedBtn?'btnSelected':''}} {{index==0&&selectSwitchBtn?'btnSelected':''}}">
+        <text class="iconfont {{item.icon}}"></text>
+      </view>
+      <view class="label">{{item.name}}</view>
+    </view>
+  </view>
+</view>
