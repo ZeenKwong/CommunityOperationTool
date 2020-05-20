@@ -1,0 +1,24 @@
+<!--pages/msgBoard/msgBoard.wxml-->
+<view class="contain">
+  <scroll-view scroll-y="true" class="scrollCustom">
+    <view wx:for="{{msg}}" wx:key="_id" class="msgContain">
+      <view class="avatar">
+        <text class="iconfont icon-avatar" style="color:#b3b3b399"></text>
+      </view>
+      <view class="msgMiddle">
+        <view style="margin-bottom:4px;font-weight: bold">{{item.nickName}}</view>
+        <view>{{item.msg}}</view>
+      </view>
+      <view>
+        <text class="iconfont icon-zan" style="font-size:16px;"></text>
+        <!-- <text class="iconfont icon-yizan" style="font-size:16px;"></text> -->
+        {{item.like}}
+      </view>
+    </view>
+  </scroll-view>
+  <view class="bottom">
+    <button
+      type="primary"
+    >留言</button>
+  </view>
+</view>
